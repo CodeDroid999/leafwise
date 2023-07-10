@@ -32,8 +32,6 @@ def predict():
     file_path = os.path.join(basepath, './uploads', secure_filename(image_file.filename))
     image_file.save(file_path)
     
-    
-
     # Make prediction
     result = model_predict(file_path, model)
 
@@ -45,6 +43,3 @@ def predict():
     
     # Return the prediction result
     return output
-
-if __name__ == '__main__':
-    app.run()
