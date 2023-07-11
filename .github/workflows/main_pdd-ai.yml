@@ -28,9 +28,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: |
-         python -m pip install --upgrade pip
-         python -m pip install flask numpy tensorflow werkzeug
+        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -62,4 +60,4 @@ jobs:
         with:
           app-name: 'pdd-ai'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0899F59A0CC420D976DD3E46BD83D41 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ABDC1073C6164307ABA03ABA17062A21 }}
